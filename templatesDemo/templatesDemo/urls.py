@@ -1,4 +1,4 @@
-"""firstproject URL Configuration
+"""templatesDemo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
-
+from templateApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('firstApp/',include('firstapp.urls')),
-    path('quoteApp/',include('quoteapp.urls'))
+    path('firstTemplate',views.renderTemplate)
 ]
